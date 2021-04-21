@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" android:isScrollContainer="true">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/mobile"
+        android:gravity="center" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/mobile"
+        android:gravity="center"
+        android:inputType="number"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/button"
+        android:id="@+id/buttonClick"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:layout_marginTop="50dp">
+        <Button
+            android:id="@+id/btn_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAllCaps="false"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true" />
+
+        <Button
+            android:id="@+id/btn_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            android:textAllCaps="false"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/btn_textView"
+            android:layout_alignParentLeft="true" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EditText"
+            android:textAllCaps="false"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/btn_button"
+            android:layout_alignParentLeft="true" />
+
+        <Button
+            android:id="@+id/btn_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RadioButton"
+            android:textAllCaps="false"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/btn_login"
+            android:layout_alignParentLeft="true" />
+
+        <Button
+            android:id="@+id/btn_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CheckBox"
+            android:textAllCaps="false"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/btn_radio"
+            android:layout_alignParentLeft="true" />
+
+        <Button
+            android:id="@+id/btn_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ImageView"
+            android:textAllCaps="false"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/btn_checkbox"
+            android:layout_alignParentLeft="true" />
+
+        <Button
+            android:id="@+id/btn_listview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ListView"
+            android:textAllCaps="false"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/btn_imageview"
+            android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+</LinearLayout>
