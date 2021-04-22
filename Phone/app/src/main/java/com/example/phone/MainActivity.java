@@ -24,9 +24,11 @@ import static android.content.Intent.ACTION_DIAL;
 
 public class MainActivity extends AppCompatActivity {
     EditText mobileText;
-    private  Button mBtnTextView, mBtnButton;
-    private  Button mBtnEditText;
-    private  Button mBtnRadioButton, mBtnCheckBox, mBtnImageView, mBtnListView, mBtnGridView, mBtnRecyleView;
+    private Button mBtnTextView, mBtnButton;
+    private Button mBtnEditText;
+    private Button mBtnRadioButton, mBtnCheckBox, mBtnImageView,
+            mBtnListView, mBtnGridView, mBtnRecyleView,
+            mBtnWebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnListView = findViewById(R.id.btn_listview);
         mBtnGridView = findViewById(R.id.btn_gridview);
         mBtnRecyleView = findViewById(R.id.btn_recycle_view);
+        mBtnWebView = findViewById(R.id.btn_webview);
         setListeners();
     }
 
@@ -86,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnListView.setOnClickListener(onClick);
         mBtnGridView.setOnClickListener(onClick);
         mBtnRecyleView.setOnClickListener(onClick);
+        mBtnWebView.setOnClickListener(onClick);
     }
 
     private  class OnClick implements View.OnClickListener {
@@ -141,6 +145,11 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_recycle_view:
                     // 跳转到RecycleView演示界面
                     intent = new Intent(MainActivity.this, RecycleViewActivity.class);
+                    break;
+
+                case R.id.btn_webview:
+                    // 跳转到RecycleView演示界面
+                    intent = new Intent(MainActivity.this, WebViewActivity.class);
                     break;
 
                 default:
