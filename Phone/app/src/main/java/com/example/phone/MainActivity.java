@@ -14,7 +14,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.phone.gridview.GridViewActivity;
 import com.example.phone.listview.ListViewActivity;
+import com.example.phone.recycleview.RecycleViewActivity;
 
 import static android.Manifest.permission.CALL_PHONE;
 import static android.content.Intent.ACTION_CALL;
@@ -24,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     EditText mobileText;
     private  Button mBtnTextView, mBtnButton;
     private  Button mBtnEditText;
-    private  Button mBtnRadioButton, mBtnCheckBox, mBtnImageView, mBtnListView;
+    private  Button mBtnRadioButton, mBtnCheckBox, mBtnImageView, mBtnListView, mBtnGridView, mBtnRecyleView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
         mBtnCheckBox = findViewById(R.id.btn_checkbox);
         mBtnImageView = findViewById(R.id.btn_imageview);
         mBtnListView = findViewById(R.id.btn_listview);
+        mBtnGridView = findViewById(R.id.btn_gridview);
+        mBtnRecyleView = findViewById(R.id.btn_recycle_view);
         setListeners();
     }
 
@@ -80,6 +84,8 @@ public class MainActivity extends AppCompatActivity {
         mBtnCheckBox.setOnClickListener(onClick);
         mBtnImageView.setOnClickListener(onClick);
         mBtnListView.setOnClickListener(onClick);
+        mBtnGridView.setOnClickListener(onClick);
+        mBtnRecyleView.setOnClickListener(onClick);
     }
 
     private  class OnClick implements View.OnClickListener {
@@ -113,18 +119,28 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
                 case R.id.btn_checkbox:
-                    // 跳转到RadioButton演示界面
+                    // 跳转到CheckBox演示界面
                     intent = new Intent(MainActivity.this, CheckBoxActivity.class);
                     break;
 
                 case R.id.btn_imageview:
-                    // 跳转到RadioButton演示界面
+                    // 跳转到ImageView演示界面
                     intent = new Intent(MainActivity.this, ImageViewActivity.class);
                     break;
 
                 case R.id.btn_listview:
-                    // 跳转到RadioButton演示界面
+                    // 跳转到ListView演示界面
                     intent = new Intent(MainActivity.this, ListViewActivity.class);
+                    break;
+
+                case R.id.btn_gridview:
+                    // 跳转到GridView演示界面
+                    intent = new Intent(MainActivity.this, GridViewActivity.class);
+                    break;
+
+                case R.id.btn_recycle_view:
+                    // 跳转到RecycleView演示界面
+                    intent = new Intent(MainActivity.this, RecycleViewActivity.class);
                     break;
 
                 default:

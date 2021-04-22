@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,7 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Phone">
-        <activity android:name=".ImageViewActivity"></activity>
+        <activity android:name=".recycleview.WaterFallRecycleViewActivity"></activity>
+        <activity android:name=".recycleview.GridRecycleViewActivity" />
+        <activity android:name=".recycleview.HorRecycleViewActivity" />
+        <activity android:name=".recycleview.LinearRecycleViewActivity" />
+        <activity android:name=".recycleview.RecycleViewActivity" />
+        <activity android:name=".ImageViewActivity" />
         <activity android:name=".CheckBoxActivity" />
         <activity android:name=".RadioButtonActivity" />
         <activity android:name=".EditTextActivity" />
@@ -24,7 +30,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.phone.listview.ListViewActivity" />
+        <activity android:name=".listview.ListViewActivity" />
+        <activity android:name=".gridview.GridViewActivity" />
     </application>
 
 </manifest>
