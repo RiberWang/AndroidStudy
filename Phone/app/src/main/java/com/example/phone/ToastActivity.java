@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.phone.Util.ToastUtil;
+import com.example.phone.utils.ToastUtil;
 
 public class ToastActivity extends AppCompatActivity {
     private Button mBtnToast1, mBtnToast2, mBtnToast3, mBtnToast4;

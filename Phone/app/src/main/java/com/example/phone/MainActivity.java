@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnEditText;
     private Button mBtnRadioButton, mBtnCheckBox, mBtnImageView,
             mBtnListView, mBtnGridView, mBtnRecyleView,
-            mBtnWebView, mBtnToast;
+            mBtnWebView, mBtnToast, mBtnAlert;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnRecyleView = findViewById(R.id.btn_recycle_view);
         mBtnWebView = findViewById(R.id.btn_webview);
         mBtnToast = findViewById(R.id.btn_toast);
-
+        mBtnAlert = findViewById(R.id.btn_alert_dialog);
         setListeners();
     }
 
@@ -91,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnRecyleView.setOnClickListener(onClick);
         mBtnWebView.setOnClickListener(onClick);
         mBtnToast.setOnClickListener(onClick);
+        mBtnAlert.setOnClickListener(onClick);
     }
 
     private  class OnClick implements View.OnClickListener {
@@ -156,6 +157,11 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_toast:
                     // 跳转到RecycleView演示界面
                     intent = new Intent(MainActivity.this, ToastActivity.class);
+                    break;
+
+                case R.id.btn_alert_dialog:
+                    // 跳转到RecycleView演示界面
+                    intent = new Intent(MainActivity.this, AlertDialogActivity.class);
                     break;
 
                 default:
