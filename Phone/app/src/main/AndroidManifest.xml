@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Phone">
-        <activity android:name=".WebViewActivity"></activity>
+        <activity android:name=".ToastActivity"></activity>
+        <activity android:name=".WebViewActivity" />
         <activity android:name=".recycleview.WaterFallRecycleViewActivity" />
         <activity android:name=".recycleview.GridRecycleViewActivity" />
         <activity android:name=".recycleview.HorRecycleViewActivity" />

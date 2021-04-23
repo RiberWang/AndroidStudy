@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnEditText;
     private Button mBtnRadioButton, mBtnCheckBox, mBtnImageView,
             mBtnListView, mBtnGridView, mBtnRecyleView,
-            mBtnWebView;
+            mBtnWebView, mBtnToast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
         mBtnGridView = findViewById(R.id.btn_gridview);
         mBtnRecyleView = findViewById(R.id.btn_recycle_view);
         mBtnWebView = findViewById(R.id.btn_webview);
+        mBtnToast = findViewById(R.id.btn_toast);
+
         setListeners();
     }
 
@@ -73,8 +75,6 @@ public class MainActivity extends AppCompatActivity {
             Uri data = Uri.parse("tel:" + number);
             intent.setData(data);
             startActivity(intent);
-
-
         }
     }
 
@@ -90,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnGridView.setOnClickListener(onClick);
         mBtnRecyleView.setOnClickListener(onClick);
         mBtnWebView.setOnClickListener(onClick);
+        mBtnToast.setOnClickListener(onClick);
     }
 
     private  class OnClick implements View.OnClickListener {
@@ -150,6 +151,11 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_webview:
                     // 跳转到RecycleView演示界面
                     intent = new Intent(MainActivity.this, WebViewActivity.class);
+                    break;
+
+                case R.id.btn_toast:
+                    // 跳转到RecycleView演示界面
+                    intent = new Intent(MainActivity.this, ToastActivity.class);
                     break;
 
                 default:

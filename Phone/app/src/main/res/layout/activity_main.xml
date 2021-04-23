@@ -134,6 +134,16 @@
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/btn_recycle_view"
                 android:layout_alignParentLeft="true" />
+
+            <Button
+                android:id="@+id/btn_toast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toast"
+                android:textAllCaps="false"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/btn_webview"
+                android:layout_alignParentLeft="true" />
         </RelativeLayout>
 
         <HorizontalScrollView
