@@ -12,14 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Phone">
+        <activity android:name=".CustomAlertDialogActivity"></activity>
+        <activity android:name=".ProgressActivity" />
         <activity android:name=".AlertDialogActivity" />
         <activity android:name=".MainActivity2">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-        </activity>
 
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
         <activity android:name=".ToastActivity" />
         <activity android:name=".WebViewActivity" />
         <activity android:name=".recycleview.WaterFallRecycleViewActivity" />

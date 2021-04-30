@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnRadioButton, mBtnCheckBox, mBtnImageView,
             mBtnListView, mBtnGridView, mBtnRecyleView,
             mBtnWebView, mBtnToast, mBtnAlert;
+    private  Button mBtnProgress;
+    private  Button mBtnCustomAlert;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
         mBtnWebView = findViewById(R.id.btn_webview);
         mBtnToast = findViewById(R.id.btn_toast);
         mBtnAlert = findViewById(R.id.btn_alert_dialog);
+        mBtnProgress = findViewById(R.id.btn_progress);
+        mBtnCustomAlert = findViewById(R.id.btn_custom_alert_dialog);
         setListeners();
     }
 
@@ -92,6 +96,8 @@ public class MainActivity extends AppCompatActivity {
         mBtnWebView.setOnClickListener(onClick);
         mBtnToast.setOnClickListener(onClick);
         mBtnAlert.setOnClickListener(onClick);
+        mBtnProgress.setOnClickListener(onClick);
+        mBtnCustomAlert.setOnClickListener(onClick);
     }
 
     private  class OnClick implements View.OnClickListener {
@@ -150,18 +156,28 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
                 case R.id.btn_webview:
-                    // 跳转到RecycleView演示界面
+                    // 跳转到WebView演示界面
                     intent = new Intent(MainActivity.this, WebViewActivity.class);
                     break;
 
                 case R.id.btn_toast:
-                    // 跳转到RecycleView演示界面
+                    // 跳转到Toast演示界面
                     intent = new Intent(MainActivity.this, ToastActivity.class);
                     break;
 
                 case R.id.btn_alert_dialog:
-                    // 跳转到RecycleView演示界面
+                    // 跳转到AlertDialog演示界面
                     intent = new Intent(MainActivity.this, AlertDialogActivity.class);
+                    break;
+
+                case R.id.btn_progress:
+                    // 跳转到Progress演示界面
+                    intent = new Intent(MainActivity.this, ProgressActivity.class);
+                    break;
+
+                case R.id.btn_custom_alert_dialog:
+                    // 跳转到自定义AlertDialog演示界面
+                    intent = new Intent(MainActivity.this, CustomAlertDialogActivity.class);
                     break;
 
                 default:

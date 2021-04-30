@@ -57,14 +57,14 @@ public class WebViewActivity extends AppCompatActivity {
         @Override
         public void onPageStarted(WebView view, String url, Bitmap favicon) {
             super.onPageStarted(view, url, favicon);
-            Log.d("webview", "onPageStarted");
+            Log.d("webView", "onPageStarted");
         }
 
         @Override
         public void onPageFinished(WebView view, String url) {
             super.onPageFinished(view, url);
 
-            Log.d("webview", "onPageStarted");
+            Log.d("webView", "onPageStarted");
             webView.loadUrl("javascript:alert('还不走呢')");
             webView.evaluateJavascript("javascript:alert('走了')", null);
         }

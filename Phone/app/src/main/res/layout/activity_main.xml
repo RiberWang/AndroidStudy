@@ -154,6 +154,21 @@
                 android:text="AletDialog"
                 android:textAllCaps="false"
                 android:layout_below="@+id/btn_toast"/>
+            <Button
+                android:id="@+id/btn_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Progress"
+                android:textAllCaps="false"
+                android:layout_below="@+id/btn_alert_dialog"/>
+
+            <Button
+                android:id="@+id/btn_custom_alert_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Custom AlertDialog"
+                android:textAllCaps="false"
+                android:layout_below="@+id/btn_alert_dialog"/>
         </RelativeLayout>
 
         <HorizontalScrollView
