@@ -168,7 +168,7 @@
                 android:layout_height="wrap_content"
                 android:text="Custom AlertDialog"
                 android:textAllCaps="false"
-                android:layout_below="@+id/btn_alert_dialog"/>
+                android:layout_below="@+id/btn_progress"/>
         </RelativeLayout>
 
         <HorizontalScrollView
