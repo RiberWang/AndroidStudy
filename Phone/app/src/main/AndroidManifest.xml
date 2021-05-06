@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Phone">
-        <activity android:name=".CustomAlertDialogActivity"></activity>
+        <activity android:name=".PopupWindowActivity"></activity>
+        <activity android:name=".CustomAlertDialogActivity" />
         <activity android:name=".ProgressActivity" />
         <activity android:name=".AlertDialogActivity" />
         <activity android:name=".MainActivity2">

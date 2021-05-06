@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
             mBtnWebView, mBtnToast, mBtnAlert;
     private  Button mBtnProgress;
     private  Button mBtnCustomAlert;
+    private  Button mBtnPopup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnAlert = findViewById(R.id.btn_alert_dialog);
         mBtnProgress = findViewById(R.id.btn_progress);
         mBtnCustomAlert = findViewById(R.id.btn_custom_alert_dialog);
+        mBtnPopup = findViewById(R.id.btn_main_popup);
         setListeners();
     }
 
@@ -98,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnAlert.setOnClickListener(onClick);
         mBtnProgress.setOnClickListener(onClick);
         mBtnCustomAlert.setOnClickListener(onClick);
+        mBtnPopup.setOnClickListener(onClick);
     }
 
     private  class OnClick implements View.OnClickListener {
@@ -178,6 +181,11 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_custom_alert_dialog:
                     // 跳转到自定义AlertDialog演示界面
                     intent = new Intent(MainActivity.this, CustomAlertDialogActivity.class);
+                    break;
+
+                case R.id.btn_main_popup:
+                    // 跳转到自定义AlertDialog演示界面
+                    intent = new Intent(MainActivity.this, PopupWindowActivity.class);
                     break;
 
                 default:

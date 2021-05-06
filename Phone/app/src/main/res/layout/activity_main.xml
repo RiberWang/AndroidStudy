@@ -169,6 +169,14 @@
                 android:text="Custom AlertDialog"
                 android:textAllCaps="false"
                 android:layout_below="@+id/btn_progress"/>
+
+            <Button
+                android:id="@+id/btn_main_popup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PopupWindow"
+                android:textAllCaps="false"
+                android:layout_below="@+id/btn_custom_alert_dialog"/>
         </RelativeLayout>
 
         <HorizontalScrollView
