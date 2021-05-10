@@ -12,7 +12,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Phone">
-        <activity android:name=".PopupWindowActivity"></activity>
+        <activity android:name=".jump.BActivity" android:label="B" android:launchMode="standard">
+            <intent-filter>
+                <action android:name="android.intent.action.BActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".jump.AActivity" android:label="A" android:launchMode="standard"/>
+
+        <activity android:name=".LifeActivity" />
+        <activity android:name=".PopupWindowActivity" />
         <activity android:name=".CustomAlertDialogActivity" />
         <activity android:name=".ProgressActivity" />
         <activity android:name=".AlertDialogActivity" />
@@ -36,7 +46,9 @@
         <activity android:name=".EditTextActivity" />
         <activity android:name=".ButtonActivity" />
         <activity android:name=".TextViewActivity" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

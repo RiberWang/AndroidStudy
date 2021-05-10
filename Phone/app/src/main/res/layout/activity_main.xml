@@ -177,6 +177,22 @@
                 android:text="PopupWindow"
                 android:textAllCaps="false"
                 android:layout_below="@+id/btn_custom_alert_dialog"/>
+
+            <Button
+                android:id="@+id/btn_life_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LifeCycleActivity"
+                android:textAllCaps="false"
+                android:layout_below="@+id/btn_main_popup"/>
+
+            <Button
+                android:id="@+id/btn_main_jump"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jump"
+                android:textAllCaps="false"
+                android:layout_below="@+id/btn_life_activity"/>
         </RelativeLayout>
 
         <HorizontalScrollView

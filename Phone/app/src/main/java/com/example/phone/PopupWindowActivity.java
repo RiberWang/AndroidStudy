@@ -24,7 +24,7 @@ public class PopupWindowActivity extends AppCompatActivity {
                 mPopupWindow = new PopupWindow(view, mBtnPop.getWidth(), ViewGroup.LayoutParams.WRAP_CONTENT);
                 mPopupWindow.setOutsideTouchable(true);
                 mPopupWindow.setFocusable(true);
-                mPopupWindow.setAnimationStyle();
+//                mPopupWindow.setAnimationStyle();
                 mPopupWindow.showAsDropDown(mBtnPop);
 
             }

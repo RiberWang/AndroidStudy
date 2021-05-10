@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.phone.gridview.GridViewActivity;
+import com.example.phone.jump.AActivity;
 import com.example.phone.listview.ListViewActivity;
 import com.example.phone.recycleview.RecycleViewActivity;
 
@@ -29,10 +30,10 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnRadioButton, mBtnCheckBox, mBtnImageView,
             mBtnListView, mBtnGridView, mBtnRecyleView,
             mBtnWebView, mBtnToast, mBtnAlert;
-    private  Button mBtnProgress;
-    private  Button mBtnCustomAlert;
-    private  Button mBtnPopup;
-
+    private Button mBtnProgress;
+    private Button mBtnCustomAlert;
+    private Button mBtnPopup;
+    private Button mBtnLifeActivity, mBtnJump;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
         mBtnProgress = findViewById(R.id.btn_progress);
         mBtnCustomAlert = findViewById(R.id.btn_custom_alert_dialog);
         mBtnPopup = findViewById(R.id.btn_main_popup);
+        mBtnLifeActivity = findViewById(R.id.btn_life_activity);
+        mBtnJump = findViewById(R.id.btn_main_jump);
         setListeners();
     }
 
@@ -101,6 +104,8 @@ public class MainActivity extends AppCompatActivity {
         mBtnProgress.setOnClickListener(onClick);
         mBtnCustomAlert.setOnClickListener(onClick);
         mBtnPopup.setOnClickListener(onClick);
+        mBtnLifeActivity.setOnClickListener(onClick);
+        mBtnJump.setOnClickListener(onClick);
     }
 
     private  class OnClick implements View.OnClickListener {
@@ -184,8 +189,18 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
                 case R.id.btn_main_popup:
-                    // 跳转到自定义AlertDialog演示界面
+                    // 跳转到自定义PopupWindow演示界面
                     intent = new Intent(MainActivity.this, PopupWindowActivity.class);
+                    break;
+
+                case R.id.btn_life_activity:
+                    // 跳转到Activity生命周期演示界面
+                    intent = new Intent(MainActivity.this, LifeActivity.class);
+                    break;
+
+                case R.id.btn_main_jump:
+                    // 跳转到Jump数据传递演示界面
+                    intent = new Intent(MainActivity.this, AActivity.class);
                     break;
 
                 default:
