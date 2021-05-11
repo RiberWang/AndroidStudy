@@ -14,6 +14,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.phone.fragment.AFragment;
+import com.example.phone.fragment.ContainerActivity;
 import com.example.phone.gridview.GridViewActivity;
 import com.example.phone.jump.AActivity;
 import com.example.phone.listview.ListViewActivity;
@@ -34,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnCustomAlert;
     private Button mBtnPopup;
     private Button mBtnLifeActivity, mBtnJump;
+    private Button mBtnMainFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnPopup = findViewById(R.id.btn_main_popup);
         mBtnLifeActivity = findViewById(R.id.btn_life_activity);
         mBtnJump = findViewById(R.id.btn_main_jump);
+        mBtnMainFragment = findViewById(R.id.btn_main_fragment);
         setListeners();
     }
 
@@ -106,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnPopup.setOnClickListener(onClick);
         mBtnLifeActivity.setOnClickListener(onClick);
         mBtnJump.setOnClickListener(onClick);
+        mBtnMainFragment.setOnClickListener(onClick);
     }
 
     private  class OnClick implements View.OnClickListener {
@@ -201,6 +207,11 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_main_jump:
                     // 跳转到Jump数据传递演示界面
                     intent = new Intent(MainActivity.this, AActivity.class);
+                    break;
+
+                case R.id.btn_main_fragment:
+                    // 跳转到Fragment演示界面
+                    intent = new Intent(MainActivity.this, ContainerActivity.class);
                     break;
 
                 default:
