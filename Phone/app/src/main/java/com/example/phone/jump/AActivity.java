@@ -17,7 +17,7 @@ import com.bumptech.glide.util.Util;
 import com.example.phone.R;
 import com.example.phone.utils.ToastUtil;
 
-/*
+/* finish()返回上个页面
 * Activity的4种启动模式launchMode（standard、singleTop、singleTask、singleInstance）
 * standard 标准模式，默认 Activity是由任务栈管理的，每启动一个Activity，就会被放入栈中，按返回键，就会从栈顶移除一个Activity
 * singleTop Task栈顶复用模式 当要启动的目标Activity已经位于栈顶时，不会创建新的实例，会复用栈顶的Activity，并且其onNewIntent()方法会被调用；如果目标不在栈顶，则跟standard一样创建新的实例

@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.phone.broadcast.BroadcastActivity;
 import com.example.phone.datastorage.DataStorageActivity;
 import com.example.phone.fragment.ContainerActivity;
 import com.example.phone.gridview.GridViewActivity;
@@ -26,6 +27,8 @@ import static android.content.Intent.ACTION_CALL;
 
 public class MainActivity extends AppCompatActivity {
     EditText mobileText;
+
+    // m是member的缩写
     private Button mBtnTextView, mBtnButton;
     private Button mBtnEditText;
     private Button mBtnRadioButton, mBtnCheckBox, mBtnImageView,
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnMainFragment;
     private Button mBtnEvent, mBtnHandler;
     private Button mBtnData;
+    private Button mBtnBroadcast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnEvent = findViewById(R.id.btn_main_event);
         mBtnHandler = findViewById(R.id.btn_main_handler);
         mBtnData = findViewById(R.id.btn_main_data);
+        mBtnBroadcast = findViewById(R.id.btn_main_broadcast);
         setListeners();
     }
 
@@ -99,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnEvent.setOnClickListener(onClick);
         mBtnHandler.setOnClickListener(onClick);
         mBtnData.setOnClickListener(onClick);
+        mBtnBroadcast.setOnClickListener(onClick);
     }
 
     private final class ButtonClickListener implements View.OnClickListener {
@@ -222,18 +228,23 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
                 case R.id.btn_main_event:
-                    // 跳转到Fragment演示界面
+                    // 跳转到Event演示界面
                     intent = new Intent(MainActivity.this, EventActivity.class);
                     break;
 
                 case R.id.btn_main_handler:
-                    // 跳转到Fragment演示界面
+                    // 跳转到Handler演示界面
                     intent = new Intent(MainActivity.this, HandlerActivity.class);
                     break;
 
                 case R.id.btn_main_data:
-                    // 跳转到Fragment演示界面
+                    // 跳转到DataStorage演示界面
                     intent = new Intent(MainActivity.this, DataStorageActivity.class);
+                    break;
+
+                case R.id.btn_main_broadcast:
+                    // 跳转到Broadcast演示界面
+                    intent = new Intent(MainActivity.this, BroadcastActivity.class);
                     break;
 
                 default:

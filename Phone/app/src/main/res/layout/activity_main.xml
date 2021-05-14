@@ -225,6 +225,14 @@
                 android:text="DataStorage"
                 android:textAllCaps="false"
                 android:layout_below="@+id/btn_main_handler"/>
+
+            <Button
+                android:id="@+id/btn_main_broadcast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LocalBroadcast"
+                android:textAllCaps="false"
+                android:layout_below="@+id/btn_main_data"/>
         </RelativeLayout>
 
         <HorizontalScrollView
