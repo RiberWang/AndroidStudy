@@ -233,6 +233,14 @@
                 android:text="LocalBroadcast"
                 android:textAllCaps="false"
                 android:layout_below="@+id/btn_main_data"/>
+
+            <Button
+                android:id="@+id/btn_main_animation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Animation"
+                android:textAllCaps="false"
+                android:layout_below="@+id/btn_main_broadcast"/>
         </RelativeLayout>
 
         <HorizontalScrollView

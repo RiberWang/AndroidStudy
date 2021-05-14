@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnEvent, mBtnHandler;
     private Button mBtnData;
     private Button mBtnBroadcast;
+    private Button mBtnAnimation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnHandler = findViewById(R.id.btn_main_handler);
         mBtnData = findViewById(R.id.btn_main_data);
         mBtnBroadcast = findViewById(R.id.btn_main_broadcast);
+        mBtnAnimation = findViewById(R.id.btn_main_animation);
         setListeners();
     }
 
@@ -105,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnHandler.setOnClickListener(onClick);
         mBtnData.setOnClickListener(onClick);
         mBtnBroadcast.setOnClickListener(onClick);
+        mBtnAnimation.setOnClickListener(onClick);
     }
 
     private final class ButtonClickListener implements View.OnClickListener {
@@ -245,6 +248,11 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_main_broadcast:
                     // 跳转到Broadcast演示界面
                     intent = new Intent(MainActivity.this, BroadcastActivity.class);
+                    break;
+
+                case R.id.btn_main_animation:
+                    // 跳转到Broadcast演示界面
+                    intent = new Intent(MainActivity.this, AnimationActivity.class);
                     break;
 
                 default:
