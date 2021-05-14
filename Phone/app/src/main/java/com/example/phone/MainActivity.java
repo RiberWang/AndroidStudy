@@ -1,6 +1,7 @@
 package com.example.phone;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -9,12 +10,11 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.phone.fragment.AFragment;
+import com.example.phone.datastorage.DataStorageActivity;
 import com.example.phone.fragment.ContainerActivity;
 import com.example.phone.gridview.GridViewActivity;
 import com.example.phone.jump.AActivity;
@@ -23,7 +23,6 @@ import com.example.phone.recycleview.RecycleViewActivity;
 
 import static android.Manifest.permission.CALL_PHONE;
 import static android.content.Intent.ACTION_CALL;
-import static android.content.Intent.ACTION_DIAL;
 
 public class MainActivity extends AppCompatActivity {
     EditText mobileText;
@@ -38,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnLifeActivity, mBtnJump;
     private Button mBtnMainFragment;
     private Button mBtnEvent, mBtnHandler;
+    private Button mBtnData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,27 +72,8 @@ public class MainActivity extends AppCompatActivity {
         mBtnMainFragment = findViewById(R.id.btn_main_fragment);
         mBtnEvent = findViewById(R.id.btn_main_event);
         mBtnHandler = findViewById(R.id.btn_main_handler);
+        mBtnData = findViewById(R.id.btn_main_data);
         setListeners();
-    }
-
-    private final class ButtonClickListener implements View.OnClickListener {
-        public void onClick(View v) {
-            if (ContextCompat.checkSelfPermission(MainActivity.this, CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(MainActivity.this, new String[]{ CALL_PHONE}, 1); // 获取权限
-            }
-            else  {
-                call();
-            }
-        }
-
-        private void call() {
-            String number = mobileText.getText().toString();
-            System.out.println(number);
-            Intent intent = new Intent(ACTION_CALL); // ACTION_CALL直接拨打电话 ACTION_DIAL跳转到拨号界面，用户手动点击拨打
-            Uri data = Uri.parse("tel:" + number);
-            intent.setData(data);
-            startActivity(intent);
-        }
     }
 
     private void setListeners() {
@@ -117,6 +98,27 @@ public class MainActivity extends AppCompatActivity {
         mBtnMainFragment.setOnClickListener(onClick);
         mBtnEvent.setOnClickListener(onClick);
         mBtnHandler.setOnClickListener(onClick);
+        mBtnData.setOnClickListener(onClick);
+    }
+
+    private final class ButtonClickListener implements View.OnClickListener {
+        public void onClick(View v) {
+            if (ContextCompat.checkSelfPermission(MainActivity.this, CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(MainActivity.this, new String[]{ CALL_PHONE}, 1); // 获取权限
+            }
+            else  {
+                call();
+            }
+        }
+
+        private void call() {
+            String number = mobileText.getText().toString();
+            System.out.println(number);
+            Intent intent = new Intent(ACTION_CALL); // ACTION_CALL直接拨打电话 ACTION_DIAL跳转到拨号界面，用户手动点击拨打
+            Uri data = Uri.parse("tel:" + number);
+            intent.setData(data);
+            startActivity(intent);
+        }
     }
 
     private  class OnClick implements View.OnClickListener {
@@ -227,6 +229,11 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_main_handler:
                     // 跳转到Fragment演示界面
                     intent = new Intent(MainActivity.this, HandlerActivity.class);
+                    break;
+
+                case R.id.btn_main_data:
+                    // 跳转到Fragment演示界面
+                    intent = new Intent(MainActivity.this, DataStorageActivity.class);
                     break;
 
                 default:
