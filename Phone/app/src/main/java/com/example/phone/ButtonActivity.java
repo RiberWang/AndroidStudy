@@ -16,6 +16,8 @@ public class ButtonActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_button);
 
+        // android:foreground="?selectableItemBackground" 水波纹 无圆角
+
         mBtn3 = findViewById(R.id.btn_3);
         mBtn3.setOnClickListener(new View.OnClickListener() {
             @Override

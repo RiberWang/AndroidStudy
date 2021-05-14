@@ -22,6 +22,9 @@ import com.example.phone.jump.AActivity;
 import com.example.phone.listview.ListViewActivity;
 import com.example.phone.recycleview.RecycleViewActivity;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 import static android.Manifest.permission.CALL_PHONE;
 import static android.content.Intent.ACTION_CALL;
 
@@ -43,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnData;
     private Button mBtnBroadcast;
     private Button mBtnAnimation;
+
+    private ArrayList list = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
