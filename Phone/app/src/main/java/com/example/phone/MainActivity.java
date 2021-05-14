@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnPopup;
     private Button mBtnLifeActivity, mBtnJump;
     private Button mBtnMainFragment;
+    private Button mBtnEvent, mBtnHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
         mBtnLifeActivity = findViewById(R.id.btn_life_activity);
         mBtnJump = findViewById(R.id.btn_main_jump);
         mBtnMainFragment = findViewById(R.id.btn_main_fragment);
+        mBtnEvent = findViewById(R.id.btn_main_event);
+        mBtnHandler = findViewById(R.id.btn_main_handler);
         setListeners();
     }
 
@@ -112,6 +115,8 @@ public class MainActivity extends AppCompatActivity {
         mBtnLifeActivity.setOnClickListener(onClick);
         mBtnJump.setOnClickListener(onClick);
         mBtnMainFragment.setOnClickListener(onClick);
+        mBtnEvent.setOnClickListener(onClick);
+        mBtnHandler.setOnClickListener(onClick);
     }
 
     private  class OnClick implements View.OnClickListener {
@@ -212,6 +217,16 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_main_fragment:
                     // 跳转到Fragment演示界面
                     intent = new Intent(MainActivity.this, ContainerActivity.class);
+                    break;
+
+                case R.id.btn_main_event:
+                    // 跳转到Fragment演示界面
+                    intent = new Intent(MainActivity.this, EventActivity.class);
+                    break;
+
+                case R.id.btn_main_handler:
+                    // 跳转到Fragment演示界面
+                    intent = new Intent(MainActivity.this, HandlerActivity.class);
                     break;
 
                 default:

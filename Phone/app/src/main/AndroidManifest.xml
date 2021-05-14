@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Phone">
-        <activity android:name=".fragment.ContainerActivity"></activity>
+        <activity android:name=".HandlerActivity"></activity>
+        <activity android:name=".EventActivity" />
+        <activity android:name=".fragment.ContainerActivity" />
         <activity
             android:name=".jump.BActivity"
             android:label="B"

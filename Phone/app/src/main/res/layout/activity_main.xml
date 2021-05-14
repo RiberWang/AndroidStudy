@@ -201,6 +201,22 @@
                 android:text="Fragment"
                 android:textAllCaps="false"
                 android:layout_below="@+id/btn_main_jump"/>
+
+            <Button
+                android:id="@+id/btn_main_event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Event"
+                android:textAllCaps="false"
+                android:layout_below="@+id/btn_main_fragment"/>
+
+            <Button
+                android:id="@+id/btn_main_handler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Handler"
+                android:textAllCaps="false"
+                android:layout_below="@+id/btn_main_event"/>
         </RelativeLayout>
 
         <HorizontalScrollView
